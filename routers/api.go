@@ -19,9 +19,6 @@ func SetupRouter() *gin.Engine {
 	router.GET("/ws", func(c *gin.Context) {
 		wsController.WsHandler(c.Writer, c.Request)
 	})
-	router.GET("/wstest", func(c *gin.Context) {
-		c.String(200, "pong")
-	})
 
 	return router
 }
